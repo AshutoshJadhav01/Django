@@ -12,7 +12,11 @@ version: 0.2
       commands:
         - python --version
         - pylint $CODEBUILD_SRC_DIR/*.py
+        - pylint --disable=C *.py **/*.py
         - pylint $CODEBUILD_SRC_DIR/demoproj/*.py
+        
+
+    
 
     artifacts:
       files:
